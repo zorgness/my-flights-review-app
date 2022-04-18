@@ -55,7 +55,7 @@ const Airline = () => {
 
     
     useEffect(() => {
-        const url = `https://my-flights-review-app.herokuapp.com/api/v1/airlines/${slug}`
+        const url = `http://localhost:3000/api/v1/airlines/${slug}`
         axios.get(url)
         .then(resp => {
 
@@ -80,7 +80,7 @@ const Airline = () => {
       // axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
 
       
-      axios.post("https://my-flights-review-app.herokuapp.com/api/v1/reviews/",{...review, airline_id})
+      axios.post("http://localhost:3000/api/v1/reviews/",{...review, airline_id})
       .then(resp => {
         // debugger
         const included = [...airline.included, resp.data.data]

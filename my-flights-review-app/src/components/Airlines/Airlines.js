@@ -43,7 +43,7 @@ const Airlines = () => {
         //get all airlines from API
         // update airlines in our state
 
-        axios.get('https://my-flights-review-app.herokuapp.com/api/v1/airlines')
+        axios.get('http://localhost:3000/api/v1/airlines')
         .then(resp => {
             setAirlines(resp.data.data)
         }).catch(err => console.log(err))
